@@ -6,7 +6,7 @@ class STACKMain
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the size of the stack: ");
         int size = sc.nextInt();
-        STACK2 s = new STACK2(size);
+        STACK s = new STACK(size);
         while(true)
         {
             System.out.println("Choose one of the options: ");
