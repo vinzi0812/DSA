@@ -10,10 +10,6 @@ class InfixtoPostfix
         System.out.println("Enter an equation: ");
         String e = sc.nextLine();
         char[] eq = e.toCharArray();
-        for(int i = 0; i < eq.length; i++)
-        {
-            System.out.println(eq[i]);
-        }
         char[] ans = new char[eq.length];
         int k = 0, flag = 0;
         for(int i = 0; i < eq.length; i++)
