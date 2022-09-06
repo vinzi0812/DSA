@@ -48,26 +48,20 @@ class STACKMain
 }
 class STACK
 {
-    int stack[];
+    char stack[];
     int size;
-    int top;
+    int t;
     STACK()
     {
-        size = 1;
-        top = -1;
-    }
-    STACK(int size)
-    {
-        this.size = size;
-        stack = new int[size];
-        top = -1;
+        size = 100;
+        t = -1;
     }
     void push(int n)
     {
-        if(top < size - 1)
+        if(!isFull())
         {
-            stack[++top] = n;
-            System.out.println("Element has been pushed.");
+            stack[++t] = n;
+            System.out.println(n + " has been pushed.");
         }
         else
         {
@@ -76,14 +70,26 @@ class STACK
     }
     void pop()
     {
-        if(top > -1)
+        if(!isEmpty())
         {
-            top--;
+            t--;
             System.out.println("Element has been popped.");
         }
         else
         {
             System.out.println("STACK UNDERFLOW.");
         }
+    }
+    char top()
+    {
+        return stack[t];
+    }
+    boolean isEmpty()
+    {
+        return t == -1;
+    }
+    boolean isFull()
+    {
+        return t == size - 1;
     }
 }
