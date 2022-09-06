@@ -1,14 +1,16 @@
-class STACK
+package dsa;
+public class STACK
 {
     char stack[];
     int size;
     int t;
-    STACK()
+    public STACK()
     {
         size = 100;
         t = -1;
+        stack = new char[size];
     }
-    void push(char n)
+    public void push(char n)
     {
         if(!isFull())
         {
@@ -20,27 +22,27 @@ class STACK
             System.out.println("STACK OVERFLOW.");
         }
     }
-    void pop()
+    public void pop()
     {
         if(!isEmpty())
         {
+            System.out.println(top() + " has been popped.");
             t--;
-            System.out.println("Element has been popped.");
         }
         else
         {
             System.out.println("STACK UNDERFLOW.");
         }
     }
-    char top()
+    public char top()
     {
         return stack[t];
     }
-    boolean isEmpty()
+    public boolean isEmpty()
     {
         return t == -1;
     }
-    boolean isFull()
+    public boolean isFull()
     {
         return t == size - 1;
     }
