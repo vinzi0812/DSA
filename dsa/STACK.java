@@ -3,18 +3,18 @@ public class STACK
 {
     char stack[];
     int size;
-    int t;
+    int top;
     public STACK()
     {
         size = 100;
-        t = -1;
+        top = -1;
         stack = new char[size];
     }
     public void push(char n)
     {
         if(!isFull())
         {
-            stack[++t] = n;
+            stack[++top] = n;
             System.out.println(n + " has been pushed.");
         }
         else
@@ -26,24 +26,24 @@ public class STACK
     {
         if(!isEmpty())
         {
-            System.out.println(top() + " has been popped.");
-            t--;
+            System.out.println(peek() + " has been popped.");
+            top--;
         }
         else
         {
             System.out.println("STACK UNDERFLOW.");
         }
     }
-    public char top()
+    public char peek()
     {
-        return stack[t];
+        return stack[top];
     }
     public boolean isEmpty()
     {
-        return t == -1;
+        return top == -1;
     }
     public boolean isFull()
     {
-        return t == size - 1;
+        return top == size - 1;
     }
 }

@@ -1,6 +1,6 @@
 import dsa.STACK;
 import java.util.*;
-class InfixtoPostfix
+class InfixtoPrefix
 {
     public static void main(String[] args) 
     {
@@ -12,20 +12,20 @@ class InfixtoPostfix
         char[] eq = e.toCharArray();
         char[] ans = new char[eq.length];
         int k = 0, flag = 0;
-        for(int i = 0; i < eq.length; i++)
+        for(int i = eq.length - 1; i >= 0; i--)
         {
             if(eq[i] != '+' && eq[i] != '-' && eq[i] != '*' && eq[i] != '*' && eq[i] != '/' && eq[i] != '%' && eq[i] != '^' && eq[i] != '(' && eq[i] != ')')
             {
                 ans[k++] = eq[i];
             }
-            else if(eq[i] == '(')
+            else if(eq[i] == ')')
             {
                 obj.push(eq[i]);
             }
-            else if(eq[i] == ')')
+            else if(eq[i] == '(')
             {
                 
-                while(obj.peek() != '(')
+                while(obj.peek() != ')')
                 {
                     ans[k++] = obj.peek();
                     obj.pop();
@@ -34,7 +34,7 @@ class InfixtoPostfix
             }
             else
             {
-                if(obj.isEmpty() || indexOf(pr, (eq[i])) > indexOf(pr, obj.peek()))
+                if(obj.isEmpty() || indexOf(pr, (eq[i])) >= indexOf(pr, obj.peek()))
                 {
                     obj.push(eq[i]);
                 }
@@ -61,7 +61,7 @@ class InfixtoPostfix
         }
         else
         {
-            for(int i = 0; i < eq.length; i++)
+            for(int i = eq.length - 1; i >= 0; i--)
             {
                 System.out.print(ans[i]);
             }
