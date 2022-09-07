@@ -40,8 +40,10 @@ class InfixtoPostfix
                 }
                 else
                 {
-                    ans[k++] = obj.peek();
-                    obj.pop();
+                    do{
+                        ans[k++] = obj.peek();
+                        obj.pop();
+                    }while(indexOf(pr, eq[i]) <= indexOf(pr, obj.peek()));
                     obj.push(eq[i]);
                 }
             }
