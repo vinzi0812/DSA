@@ -1,4 +1,4 @@
-import dsa.STACK;
+import dsa.*;
 import java.util.*;
 class InfixtoPostfix
 {
@@ -6,7 +6,7 @@ class InfixtoPostfix
     {
         Scanner sc = new Scanner(System.in);
         char[] pr = {'+', '-', '*', '/', '%', '^'};
-        STACK obj = new STACK();
+        charSTACK obj = new charSTACK();
         System.out.println("Enter an equation: ");
         String e = sc.nextLine();
         char[] eq = e.toCharArray();

@@ -1,10 +1,10 @@
 package dsa;
-public class STACK
+public class charSTACK
 {
     char stack[];
     int size;
     int top;
-    public STACK()
+    public charSTACK()
     {
         size = 100;
         top = -1;
