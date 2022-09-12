@@ -1,5 +1,4 @@
 package dsa;
-import java.util.*;
 public class charQueue
 {
     int front, rear, size;

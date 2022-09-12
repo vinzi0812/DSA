@@ -1,5 +1,4 @@
 package dsa;
-import java.util.*;
 public class intQueue
 {
     int front, rear, size;
