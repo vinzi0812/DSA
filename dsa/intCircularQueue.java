@@ -1,5 +1,5 @@
 package dsa;
-class intCircularQueue
+public class intCircularQueue
 {
     int front, rear, size;
     int[] queue;
@@ -14,7 +14,7 @@ class intCircularQueue
     {
         if(!isFull())
         {
-            rear = (rear + 1) % (size - 1);
+            rear = (rear + 1) % size;
             queue[rear] = c;
             System.out.println(c + " has been queued.");
         }
@@ -27,7 +27,7 @@ class intCircularQueue
     {
         if(!isEmpty())
         {
-            front = (front + 1) % (size - 1);
+            front = (front + 1) % size;
             System.out.println("Front has been dequeued.");
         }
         else
@@ -37,18 +37,29 @@ class intCircularQueue
     }
     public int QueueFront()
     {
-        return queue[front];
+        return queue[front + 1];
     }
     public int QueueRear()
     {
         return queue[rear];
     }
-    boolean isEmpty()
+    public void PrintQueue()
+    {
+        if(!isEmpty())
+        {
+            for(int i = front + 1; i <= (rear < front ? size - 1 : rear); i++)
+                System.out.print(queue[i] + " ");
+            if(rear < front)
+                for(int i = 0; i <= rear; i++)
+                    System.out.print(queue[i] + " ");
+        }
+    }
+    public boolean isEmpty()
     {
         return front == rear;
     }
-    boolean isFull()
+    public boolean isFull()
     {
-        return (rear + 1) % (size - 1) == front;
+        return ((rear + 1) % size == front);
     }
 }
