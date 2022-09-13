@@ -43,6 +43,10 @@ class charCircularQueue
     {
         return queue[rear];
     }
+    public int size()
+    {
+        return (rear - front + size) % size;
+    }
     boolean isEmpty()
     {
         return front == rear;

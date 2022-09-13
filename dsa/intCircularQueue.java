@@ -37,7 +37,7 @@ public class intCircularQueue
     }
     public int QueueFront()
     {
-        return queue[front + 1];
+        return queue[(front + 1) % size];
     }
     public int QueueRear()
     {
@@ -61,5 +61,9 @@ public class intCircularQueue
     public boolean isFull()
     {
         return ((rear + 1) % size == front);
+    }
+    public int size()
+    {
+        return (rear - front + size) % size;
     }
 }
