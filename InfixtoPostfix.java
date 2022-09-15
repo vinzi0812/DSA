@@ -68,6 +68,7 @@ class InfixtoPostfix
                 System.out.print(ans[i]);
             }
         }
+        sc.close();
     }
     static int indexOf(char[] arr, char c)
     {

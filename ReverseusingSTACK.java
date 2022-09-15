@@ -19,5 +19,6 @@ class ReverseusingSTACK
             System.out.println(obj.peek());
             obj.pop();
         }
+        sc.close();
     }
 }

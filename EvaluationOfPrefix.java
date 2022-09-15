@@ -23,6 +23,7 @@ class EvaluationOfPrefix
             }
         }
         System.out.println(obj.peek());
+        sc.close();
     }
     static int operate(int a, int b, char c)
     {

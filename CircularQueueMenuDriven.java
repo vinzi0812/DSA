@@ -40,5 +40,6 @@ class CircularQueueMenuDriven
                     break;
             }
         }while(ch != 5);
+        sc.close();
     }
 }

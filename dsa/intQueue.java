@@ -3,7 +3,7 @@ public class intQueue
 {
     int front, rear, size;
     int[] queue;
-    public intQueue()
+    public intQueue(int size)
     {
         front = 0;
         rear = -1;
@@ -38,6 +38,13 @@ public class intQueue
         if(!isEmpty())
             return queue[rear];
         return 0;
+    }
+    public void PrintQueue()
+    {
+        for(int i = front; i <= rear; i++)
+        {
+            System.out.print(queue[i]+" ");
+        }
     }
     public boolean isEmpty()
     {
