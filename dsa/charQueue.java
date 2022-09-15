@@ -21,13 +21,14 @@ public class charQueue
             System.out.println("Queue is full");
         }
     }
-    public void Dequeue()
+    public char Dequeue()
     {
         if(!isEmpty())
         {
-            front++;
-            System.out.println("Front element has been dequeued.");
+            char x = queue[front++];
+            return x;
         }
+        return 0;
     }
     public char QueueFront()
     {
@@ -47,6 +48,6 @@ public class charQueue
     }
     public boolean isFull()
     {
-        return rear == size - 1;
+        return rear == size-1;
     }
 }

@@ -23,7 +23,7 @@ class CircularQueueMenuDriven
                     q.PrintQueue();
                     break;
                 case 2:
-                    q.Dequeue();
+                    System.out.println(q.isEmpty() ? "Queue Empty." : q.Dequeue() + " has been dequeued.");
                     q.PrintQueue();
                     break;
                 case 3:

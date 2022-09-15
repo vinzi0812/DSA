@@ -23,17 +23,15 @@ class charCircularQueue
             System.out.println("Queue Full.");
         }
     }
-    public void Dequeue()
+    public char Dequeue()
     {
         if(!isEmpty())
         {
+            char x = queue[front + 1];
             front = (front + 1) % (size - 1);
-            System.out.println("Front has been dequeued.");
+            return x;
         }
-        else
-        {
-            System.out.println("Queue Empty.");
-        }
+        return 0;
     }
     public char QueueFront()
     {

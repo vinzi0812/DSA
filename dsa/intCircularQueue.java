@@ -23,17 +23,15 @@ public class intCircularQueue
             System.out.println("Queue Full.");
         }
     }
-    public void Dequeue()
+    public int Dequeue()
     {
         if(!isEmpty())
         {
+            int x = queue[front + 1];
             front = (front + 1) % size;
-            System.out.println("Front has been dequeued.");
+            return x;
         }
-        else
-        {
-            System.out.println("Queue Empty.");
-        }
+        return -1;
     }
     public int QueueFront()
     {

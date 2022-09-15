@@ -18,13 +18,14 @@ public class intQueue
             System.out.println(c+" has been queued.");
         }
     }
-    public void Dequeue()
+    public int Dequeue()
     {
         if(!isEmpty())
         {
-            front++;
-            System.out.println("Front element has been dequeued.");
+            int x = queue[front++];
+            return x;
         }
+        return -1;
     }
     public int QueueFront()
     {
