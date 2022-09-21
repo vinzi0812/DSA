@@ -9,9 +9,6 @@ public class intCircularLinkedList{
         }
     }
     Node head;
-    public intCircularLinkedList(){
-        head.next = head;
-    }
     public void insertAtBegin(int data){
         Node newNode = new Node(data);
         if(head == null){
@@ -77,7 +74,7 @@ public class intCircularLinkedList{
         }
         else{
             Node temp = head.next;
-            for(int i=1; i<pos-1; i++){
+            for(int i=1; i < pos - 1; i++){
                 temp = temp.next;
             }
             temp.next = temp.next.next;

@@ -12,11 +12,13 @@ class PalindromeLinkedList{
         {
             l.insertAtBegin(s.charAt(i));
         }
+        System.out.print("1st Linked List: ");
         l.printList();
         for(int i = (s.length() % 2 == 0 ? (s.length()/2): (s.length()/2 + 1)); i < s.length(); i++)
         {
             r.insertAtBegin(s.charAt(i));
         }
+        System.out.print("2nd Linked List: ");
         r.printList();
         charLinkedList n = new charLinkedList();
         for(int i = 0; i < s.length()/2; i++)
