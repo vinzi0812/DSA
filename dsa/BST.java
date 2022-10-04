@@ -1,4 +1,4 @@
-class BinaryTree{
+class BST{
     Node root;
     public class Node{
         int data;
@@ -10,7 +10,7 @@ class BinaryTree{
             right = null;
         }
     }
-    public BinaryTree(){
+    public BST(){
         root = null;
     }
     public void insert(int data){
@@ -21,7 +21,7 @@ class BinaryTree{
             node = new Node(data);
         }
         else{
-            if(node.right == null){
+            if(data >= node.data){
                 node.right = insert(node.right, data);
             }
             else{
